@@ -5,12 +5,16 @@ using UnityEngine;
 public class CarControll : MonoBehaviour 
 {
     public float carHorizontalSpeed;
+    public float maxDurability = 100f;
+    //[HideInInspector]
+    public float durability;
 
     private Vector3 _carPosition;
 
     public void Start()
     {
         _carPosition = this.gameObject.transform.position;
+        durability = 100f;
     }
 
     private void Update()
