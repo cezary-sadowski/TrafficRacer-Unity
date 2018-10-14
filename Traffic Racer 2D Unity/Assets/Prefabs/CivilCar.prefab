@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   civilCarSpeed: 2
   direction: -1
+  crashDamage: 25
 --- !u!212 &212705615587624390
 SpriteRenderer:
   m_ObjectHideFlags: 1
