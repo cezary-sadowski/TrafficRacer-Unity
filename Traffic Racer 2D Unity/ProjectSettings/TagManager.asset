@@ -6,6 +6,7 @@ TagManager:
   tags:
   - EndOfRoad
   - Untouchable
+  - Shield
   layers:
   - Default
   - TransparentFX
