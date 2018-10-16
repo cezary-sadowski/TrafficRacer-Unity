@@ -28,8 +28,15 @@ public class BanditCarBehaviour : MonoBehaviour
         }
         else
         {
-            if (gameObject.transform.position.y > 3.8f)
+            if (gameObject.transform.position.y > 3.8f && bombsAmount > 0)
                 this.gameObject.transform.Translate(new Vector3(0, -1, 0) * banditCarVerticalSpeed * Time.deltaTime);
+
+            else if (bombsAmount <= 0)
+            {
+                this.gameObject.transform.Translate(new Vector3(0, 1, 0) * banditCarVerticalSpeed * Time.deltaTime);
+                if (gameObject.transform.position.y > 6.2f)
+                    Destroy(this.gameObject);
+            }
 
             else
             {
@@ -37,6 +44,20 @@ public class BanditCarBehaviour : MonoBehaviour
                 //our position, object to follow position, time.
 
                 transform.position = new Vector3(_banditCarPosition.x, transform.position.y, 0);
+
+                _delay -= Time.deltaTime;
+                if (_delay <= 0 && bombsAmount > 0)
+                {
+                    _delay = bombDelay;
+                    bombsAmount--;
+                    Instantiate(bomb, transform.position, Quaternion.identity);
+                }
+                else if (_delay <= 0 && bombsAmount <= 5 && bombsAmount > 0)
+                {
+                    _delay = bombDelay / 2;
+                    bombsAmount--;
+                    Instantiate(bomb, transform.position, Quaternion.identity);
+                }
             }
         }
     }
