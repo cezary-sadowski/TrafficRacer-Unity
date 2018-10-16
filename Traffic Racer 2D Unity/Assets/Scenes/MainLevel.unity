@@ -536,6 +536,7 @@ GameObject:
   - component: {fileID: 1983590861}
   - component: {fileID: 1983590860}
   - component: {fileID: 1983590862}
+  - component: {fileID: 1983590863}
   m_Layer: 0
   m_Name: 'Game Manager '
   m_TagString: Untagged
@@ -588,3 +589,20 @@ MonoBehaviour:
   playerCarSpawnPlace: {fileID: 690030803}
   durabilityText: {fileID: 838062948}
   NrOfLifes: 3
+--- !u!114 &1983590863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1983590859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a739dbc7ae18249698c7dc7f1c90fa75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bonuses:
+  - {fileID: 1171930004606076, guid: e0907554a240849eeb0e271039ee8bfc, type: 2}
+  - {fileID: 1143153085960600, guid: eaa6f565f8ee14cb0a565768f39c75ee, type: 2}
+  - {fileID: 1887515706929374, guid: 1f3bdd1e61f194b84b5466f6c94c450b, type: 2}
+  minDelay: 3
+  maxDelay: 5

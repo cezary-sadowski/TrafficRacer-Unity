@@ -32,7 +32,7 @@ public class Bonuses : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.gameObject.tag == "Player")
+        if (obj.gameObject.tag == "Player" || obj.gameObject.tag == "Shield")
         {
             if (isDurability == true)
             {
